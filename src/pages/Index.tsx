@@ -62,9 +62,12 @@ const Index = () => {
         <div className="absolute inset-0 bg-[url('data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMjAwIiBoZWlnaHQ9IjIwMCIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj48ZGVmcz48cGF0dGVybiBpZD0iZ3JpZCIgd2lkdGg9IjQwIiBoZWlnaHQ9IjQwIiBwYXR0ZXJuVW5pdHM9InVzZXJTcGFjZU9uVXNlIj48cGF0aCBkPSJNIDQwIDAgTCAwIDAgMCA0MCIgZmlsbD0ibm9uZSIgc3Ryb2tlPSJ3aGl0ZSIgc3Ryb2tlLW9wYWNpdHk9IjAuMSIgc3Ryb2tlLXdpZHRoPSIxIi8+PC9wYXR0ZXJuPjwvZGVmcz48cmVjdCB3aWR0aD0iMTAwJSIgaGVpZ2h0PSIxMDAlIiBmaWxsPSJ1cmwoI2dyaWQpIi8+PC9zdmc+')] opacity-20"></div>
         <div className="container mx-auto px-4 relative">
           <div className="text-center space-y-4 animate-fade-in">
-            <h1 className="text-5xl md:text-7xl font-bold text-primary-foreground tracking-tight">
-              Virtual Try-On Studio
+            <h1 className="text-6xl md:text-8xl font-bold text-primary-foreground tracking-tight">
+              FitRoom
             </h1>
+            <p className="text-2xl md:text-3xl text-primary-foreground/80 font-semibold">
+              Virtual Try-On Studio
+            </p>
             <p className="text-xl text-primary-foreground/90 max-w-2xl mx-auto">
               See yourself in any outfit instantly with AI-powered fashion technology
             </p>
