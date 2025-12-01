@@ -133,11 +133,34 @@ const Index = () => {
               <h2 className="text-2xl font-bold text-foreground mb-6">Your Virtual Try-On</h2>
               
               {isLoading ? (
-                <div className="flex flex-col items-center justify-center h-[500px] space-y-4">
+                <div className="flex flex-col items-center justify-center h-[500px] space-y-6">
                   <div className="relative">
-                    <div className="w-20 h-20 border-4 border-primary/30 border-t-primary rounded-full animate-spin"></div>
+                    {/* Outer spinning ring */}
+                    <div className="w-32 h-32 border-4 border-primary/20 rounded-full absolute animate-spin" style={{ animationDuration: '3s' }}></div>
+                    {/* Middle spinning ring */}
+                    <div className="w-24 h-24 border-4 border-primary/40 border-t-transparent rounded-full absolute top-4 left-4 animate-spin" style={{ animationDuration: '2s' }}></div>
+                    {/* Inner spinning ring */}
+                    <div className="w-16 h-16 border-4 border-primary border-t-transparent rounded-full absolute top-8 left-8 animate-spin" style={{ animationDuration: '1s' }}></div>
+                    {/* Center sparkle icon */}
+                    <div className="absolute top-12 left-12 w-8 h-8 flex items-center justify-center">
+                      <Sparkles className="w-6 h-6 text-primary animate-pulse" />
+                    </div>
                   </div>
-                  <p className="text-muted-foreground">Creating your perfect look...</p>
+
+                  {/* Animated loading messages */}
+                  <div className="space-y-3 text-center">
+                    <p className="text-lg font-semibold text-foreground animate-pulse">
+                      Creating your perfect look...
+                    </p>
+                    <div className="flex items-center justify-center gap-2">
+                      <div className="w-2 h-2 bg-primary rounded-full animate-bounce" style={{ animationDelay: '0s' }}></div>
+                      <div className="w-2 h-2 bg-primary rounded-full animate-bounce" style={{ animationDelay: '0.2s' }}></div>
+                      <div className="w-2 h-2 bg-primary rounded-full animate-bounce" style={{ animationDelay: '0.4s' }}></div>
+                    </div>
+                    <p className="text-sm text-muted-foreground max-w-md">
+                      AI is analyzing your images and styling the perfect outfit for you
+                    </p>
+                  </div>
                 </div>
               ) : generatedImage ? (
                 <div className="space-y-4">
